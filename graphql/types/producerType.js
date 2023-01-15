@@ -29,7 +29,7 @@ const producerType = new GraphQLObjectType({
                 return producer.getSamples();
             }
         },
-        playlist: {
+        playlists: {
             type: new GraphQLList(playlistType),
             resolve: async (producer) => {
                 return producer.getPlaylists();

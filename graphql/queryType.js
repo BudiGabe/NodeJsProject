@@ -8,6 +8,7 @@ const groupQuery = require('./queries/groupQuery');
 const playlistsQuery = require('./queries/playlistsQuery');
 const samplesQuery = require('./queries/samplesQuery');
 const producersQuery = require('./queries/producersQuery');
+const notesQuery = require('./queries/notesQuery');
 
 const queryType = new GraphQLObjectType({
     name: 'Query',
@@ -18,6 +19,7 @@ const queryType = new GraphQLObjectType({
         samples: samplesQuery,
         playlists: playlistsQuery,
         producers: producersQuery,
+        notes: notesQuery
     }
 });
 
