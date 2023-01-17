@@ -54,6 +54,19 @@ module.exports = {
           },
         }
     );
+    await queryInterface.addColumn(
+      'PersonalData',
+      'producerId',
+      {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: 'Producers',
+          },
+          key: 'id'
+        },
+      }
+  );
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Producers');
